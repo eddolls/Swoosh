@@ -1,12 +1,14 @@
-package com.chrise.swoosh
+package com.chrise.swoosh.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
+// The Base Activity monitors which activity is running and the state of it
+// the current activity and state is printed out in logcat via the Log.d function
 
 open class BaseActivity : AppCompatActivity() {
 val TAG = "LifeCycle"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.d (TAG, "${javaClass.simpleName} OnCreate")
         super.onCreate(savedInstanceState)
